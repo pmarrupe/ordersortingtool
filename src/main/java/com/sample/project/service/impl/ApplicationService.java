@@ -4,6 +4,7 @@ import com.sample.project.entity.Order;
 import com.sample.project.repository.IApplicationRepository;
 import com.sample.project.service.IApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+@Service
 public class ApplicationService implements IApplicationService {
 
     @Autowired

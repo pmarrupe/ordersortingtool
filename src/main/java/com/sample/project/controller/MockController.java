@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api")
-public class ApplicationController {
+public class MockController {
 
     @Value("${srcFile.name}")
     private String srcFile;
@@ -20,8 +20,9 @@ public class ApplicationController {
     @Autowired
     IApplicationService service;
 
-    @RequestMapping(value = "/sort", method = RequestMethod.GET)
+    @RequestMapping(value = "/sort1", method = RequestMethod.GET)
     public List<Order_Product> sortOrders(){
+        System.out.println(service);
         return service.sortOrders(srcFile, destFile);
     }
 }

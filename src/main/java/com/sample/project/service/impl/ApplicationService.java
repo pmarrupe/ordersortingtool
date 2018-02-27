@@ -1,6 +1,6 @@
 package com.sample.project.service.impl;
 
-import com.sample.project.entity.Order;
+import com.sample.project.entity.Order_Product;
 import com.sample.project.repository.IApplicationRepository;
 import com.sample.project.service.IApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class ApplicationService implements IApplicationService {
     IApplicationRepository repository;
 
     @Override
-    public List<Order> sortOrders(String srcFile, String destFile) {
+    public List<Order_Product> sortOrders(String srcFile, String destFile) {
         String line;
         List<String> sortedOrders = new ArrayList();
         try {
